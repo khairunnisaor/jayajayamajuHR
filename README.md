@@ -38,11 +38,60 @@ Proyek ini akan menghasilkan dashboard yang bermanfaat sebagai alat bantu strate
 
 Sumber data: [Attrition Karyawan Jaya Jaya Maju](https://github.com/dicodingacademy/dicoding_dataset/blob/main/employee/employee_data.csv)
 
-Setup environment:
+Pada proyek ini, pembuatan dashboard dilakukan dengan menggunakan Tableau, sehingga persiapan yang dibutuhkan adalah membersihkan dan merapikan dataset untuk siap divisualisasikan.
+Proses persiapan dataset yang dilakukan adalah:
 
+1. Pengecekan dan Penanganan Nilai Hilang (Missing Values)
+Untuk dapat menangani missing values, dilakukan pengecekan pada setiap kolom terlebih dahulu.
+```python
+missing_values = df_employee.isnull().sum()
+missing_values[missing_values > 0]
+```
+Output:
+```
+Attrition:	412
+```
+Didapatkan bahwa missing values hanya terjadi pada kolom `Attrition`, oleh karena itu diputuskan untuk menghapus baris yang memiliki missing values. Hal ini dipilih karena `Attrition` adalah variabel dependen dalam studi kasus ini, sehingga tidak ada acuan yang dapat digunakan untuk melakukan imputasi data missing values tersebut.
+```python
+df_employee = df_employee.dropna()
 ```
 
+
+2. Memeriksa Data Duplikat
+Penting untuk memastikan tidak ada data yang redundan dalam dataset. Maka, dilakukan pengecekan data yang terduplikat dengan cara:
+```python
+duplicates = df_employee.duplicated()
+
+print("Baris duplikat:")
+print(df_employee[duplicates])
 ```
+Output:
+```
+Baris duplikat:
+[0 rows x 35 columns]
+```
+Didapatkan bahwa tidak ada baris yang terduplikasi.
+
+
+3. Konversi Nilai Ordinal Kembali Menjadi Data Kategorikal
+```python
+Membuat fungsi konversi data ordinal ke kategorikal
+def ord_to_cat(df, col, cat_mapping):
+    df[col] = df[col].astype(int)
+    df[col] = df[col].map(cat_mapping)
+    
+    return df[col]
+
+# Contoh konversi pada variabel dependen Education (hal ini juga dilakukan pada variabel ordinal lainnya)
+education_map = {1: 'Below College', 2: 'College', 3: 'Bachelor', 4: 'Master', 5: 'Doctor'}
+df_data['Education'] = ord_to_cat(df_data, 'Education', education_map)
+```
+
+4. Export dataset yang sudah rapi dan bersih ke format `CSV` untuk kemudian digunakan pada pembuatan dashboard dengan Tableau.
+```python
+df_data.to_csv('employee_cleaned.csv', index=False)
+```
+
 
 ## Business Dashboard
 
@@ -58,6 +107,3 @@ Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna m
 
 - action item 1
 - action item 2
-
-
-# jayajayamajuHR
