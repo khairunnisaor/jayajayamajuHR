@@ -1,4 +1,4 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Perusahaan Edutech
+# Proyek Pertama: Menyelesaikan Permasalahan Perusahaan HR
 
 ## Business Understanding
 Jaya Jaya Maju adalah perusahaan multinasional yang telah beroperasi sejak tahun 2000, dengan jumlah karyawan lebih dari 1000 orang yang tersebar di seluruh Indonesia. Meskipun telah mencapai skala yang signifikan, perusahaan menghadapi tantangan besar dalam pengelolaan sumber daya manusia, khususnya terkait dengan tingginya tingkat attrition rate. Saat ini, rasio karyawan yang keluar dibandingkan dengan total karyawan keseluruhan telah melampaui 10%, sebuah angka yang mengkhawatirkan dan dapat berdampak negatif pada operasional, produktivitas, serta stabilitas organisasi secara keseluruhan.
