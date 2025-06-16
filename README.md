@@ -17,8 +17,6 @@ Berdasarkan latar belakang, masalah utama yang dihadapi Jaya Jaya Maju adalah ti
 Berdasarkan hal ini, HR team membutuhkan pemahaman yang lebih dalam terkait faktor-faktor yang mendorong terjadinya attrition agar dapat mengembangkan strategi terbaik untuk menyelesaikan permasalahan ini. Dengan dibuatnya Business Dashboard sebagai alat monitoring karyawan berdasarkan indikator krusial yang menyebabkan attrition, diharapkan perusahaan dapat lebih mudah melalukan data-driven policy making untuk menekan angka attrition.
 
 ### Cakupan Proyek
-Cakupan proyek ini akan meliputi:
-
 1. Analisis Faktor Pendorong Attrition
 * Mengidentifikasi key variables yang secara signifikan mempengaruhi terjadinya attrition dengan menganalisis dataset yang tersedia untuk menemukan pola dan korelasi antara berbagai faktor karyawan dengan status attrition.
 * Melakukan segmentasi karyawan yang berisiko tinggi berdasarkan karakteristik karyawan, seperti departemen, jabatan, usia, tingkat kepuasan, atau pendapatan.
