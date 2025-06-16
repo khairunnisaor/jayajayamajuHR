@@ -75,7 +75,7 @@ Didapatkan bahwa tidak ada baris yang terduplikasi.
 
 3. Konversi Nilai Ordinal Kembali Menjadi Data Kategorikal
 ```python
-Membuat fungsi konversi data ordinal ke kategorikal
+# Membuat fungsi konversi data ordinal ke kategorikal
 def ord_to_cat(df, col, cat_mapping):
     df[col] = df[col].astype(int)
     df[col] = df[col].map(cat_mapping)
