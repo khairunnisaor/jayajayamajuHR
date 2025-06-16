@@ -28,24 +28,17 @@ Cakupan proyek ini akan meliputi:
 * Membuat visualisasi yang jelas dan mudah dipahami mengenai tren attrition rate secara keseluruhan, berdasarkan key dimensions (misalnya, attrition rate per departemen, per jabatan, per jenis kelamin, atau per rentang usia).
 * Mengeksplorasi Faktor Pendorong dengan menyajikan insight dalam bentuk grafik atau widget yang memungkinkan tim HR menelusuri data dan memahami dampak dari masing-masing faktor terhadap attrition.
 * Menentukan Key Performance Indicator (KPI) untuk mempertahankan karyawan, seperti
-  * Tingkat attrition kumulatif dan bulanan
-  * Rata-rata kepuasan kerja (JobSatisfaction) karyawan yang keluar vs. yang bertahan
-  * Rata-rata tahun kerja di perusahaan (YearsAtCompany) untuk karyawan yang keluar
-  * Distribusi karyawan berdasarkan PerformanceRating dan OverTime untuk mengidentifikasi potensi risiko.
+  * Tingkat attrition kumulatif
+  * Rata-rata kepuasan kerja dari karyawan yang keluar vs. yang bertahan
+  * Rata-rata tahun kerja di perusahaan untuk karyawan yang keluar
+  * Distribusi karyawan berdasarkan PerformanceRating dan OverTime untuk mengidentifikasi potensi risiko
+* Memastikan dashboard dirancang secara intuitif agar mudah digunakan oleh tim HR tanpa memerlukan keahlian teknis yang mendalam.
 
-
-
-Indikator Kinerja Utama (KPI) Terkait Retensi: Menampilkan KPI relevan seperti:
-Tingkat attrition kumulatif dan bulanan/triwulanan
-Rata-rata kepuasan kerja (JobSatisfaction) karyawan yang keluar vs. yang bertahan
-Rata-rata tahun kerja di perusahaan (YearsAtCompany) untuk karyawan yang keluar
-Distribusi karyawan berdasarkan PerformanceRating dan OverTime untuk mengidentifikasi potensi risiko.
-Aksesibilitas dan Kemudahan Penggunaan: Memastikan dashboard dirancang secara intuitif agar mudah digunakan oleh manajer HR tanpa memerlukan keahlian teknis yang mendalam.
-Proyek ini akan menghasilkan dashboard yang powerful sebagai alat bantu strategis bagi Departemen HR Jaya Jaya Maju untuk memonitor, menganalisis, dan pada akhirnya, merumuskan intervensi yang tepat guna mengurangi attrition rate dan meningkatkan retensi karyawan.
+Proyek ini akan menghasilkan dashboard yang bermanfaat sebagai alat bantu strategis bagi Departemen HR Jaya Jaya Maju untuk memonitor, menganalisis, dan pada akhirnya, merumuskan intervensi yang tepat guna mengurangi attrition rate dan meningkatkan retensi karyawan.
 
 ### Persiapan
 
-Sumber data: ....
+Sumber data: https://github.com/dicodingacademy/dicoding_dataset/blob/main/employee/employee_data.csv
 
 Setup environment:
 
