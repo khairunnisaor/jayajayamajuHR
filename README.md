@@ -42,7 +42,7 @@ Pada proyek ini, pembuatan dashboard dilakukan dengan menggunakan Tableau, sehin
 Proses persiapan dataset yang dilakukan adalah:
 
 1. Pengecekan dan Penanganan Nilai Hilang (Missing Values)
-Untuk dapat menangani missing values, dilakukan pengecekan pada setiap kolom terlebih dahulu.
+<br>Untuk dapat menangani missing values, dilakukan pengecekan pada setiap kolom terlebih dahulu.
 ```python
 missing_values = df_employee.isnull().sum()
 missing_values[missing_values > 0]
@@ -58,7 +58,7 @@ df_employee = df_employee.dropna()
 
 
 2. Memeriksa Data Duplikat
-Penting untuk memastikan tidak ada data yang redundan dalam dataset. Maka, dilakukan pengecekan data yang terduplikat dengan cara:
+<br>Penting untuk memastikan tidak ada data yang redundan dalam dataset. Maka, dilakukan pengecekan data yang terduplikat dengan cara:
 ```python
 duplicates = df_employee.duplicated()
 
@@ -82,7 +82,7 @@ def ord_to_cat(df, col, cat_mapping):
     
     return df[col]
 
-# Contoh konversi pada variabel dependen Education (hal ini juga dilakukan pada variabel ordinal lainnya)
+# Contoh konversi pada variabel Education (hal ini juga dilakukan pada variabel ordinal lainnya)
 education_map = {1: 'Below College', 2: 'College', 3: 'Bachelor', 4: 'Master', 5: 'Doctor'}
 df_data['Education'] = ord_to_cat(df_data, 'Education', education_map)
 ```
