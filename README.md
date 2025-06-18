@@ -23,14 +23,20 @@ Berdasarkan hal ini, HR team membutuhkan pemahaman yang lebih dalam terkait fakt
 * Menentukan faktor eksternal karyawan yang menyebabkan mereka meninggalkan perusahaan, seperti rendahnya kepuasan kerja, beban kerja berlebih, gaji, atau kurangnya kesempatan promosi.
 
 2. Pengembangan Business Dashboard Interaktif
-* Membuat visualisasi yang jelas dan mudah dipahami mengenai tren attrition rate secara keseluruhan, berdasarkan key dimensions (misalnya, attrition rate per departemen, per jabatan, per jenis kelamin, atau per rentang usia).
+* Membuat visualisasi yang jelas dan mudah dipahami mengenai tren attrition rate secara keseluruhan, berdasarkan key dimensions (misalnya, attrition rate per jabatan atau per rentang usia).
 * Mengeksplorasi Faktor Pendorong dengan menyajikan insight dalam bentuk grafik atau widget yang memungkinkan tim HR menelusuri data dan memahami dampak dari masing-masing faktor terhadap attrition.
 * Menentukan Key Performance Indicator (KPI) untuk mempertahankan karyawan, seperti
   * Tingkat attrition kumulatif
-  * Rata-rata kepuasan kerja dari karyawan yang keluar vs. yang bertahan
-  * Rata-rata tahun kerja di perusahaan untuk karyawan yang keluar
-  * Distribusi karyawan berdasarkan PerformanceRating dan OverTime untuk mengidentifikasi potensi risiko
+  * Tingkat lembur kumulatif
+  * Rata-rata gaji bulanan berdasarkan tahun kerja di perusahaan
+  * Distribusi karyawan dalam kepuasan faktor eksternal dan OverTime untuk mengidentifikasi potensi risiko
 * Memastikan dashboard dirancang secara intuitif agar mudah digunakan oleh tim HR tanpa memerlukan keahlian teknis yang mendalam.
+
+3. Rekomendasi untuk Action Items
+<br>Memberikan insight terkait action items yang dapat dilakukan berdasarkan analisis, seperti: 
+* Mengurangi Over Time Rate di posisi (job role) yang memiliki over time rate dan attrition rate tinggi
+* Mengevaluasi ulang seluruh sistem gaji dan fasilitas karyawan
+* Memperhatikan kepuasan lingkungan kerja karyawan
 
 Proyek ini akan menghasilkan dashboard yang bermanfaat sebagai alat bantu strategis bagi Departemen HR Jaya Jaya Maju untuk memonitor, menganalisis, dan pada akhirnya, merumuskan intervensi yang tepat guna mengurangi attrition rate dan meningkatkan retensi karyawan.
 
@@ -94,16 +100,41 @@ df_data.to_csv('employee_cleaned.csv', index=False)
 
 
 ## Business Dashboard
+Hasil analisis disajikan dalam bentuk dashboard interaktif untuk membantu tim HR Jaya Jaya Maju melakukan monitoring dan evaluasi attrition rate. Pada studi kasus ini, key variables terjadinya attrition diidentifikasi dari correlation matrix yang menunjukkan hubungan signifikan antara variabel lain dengan `Attrition`. 
+Visualisasi yang disertakan dalam dashboard yaitu:
 
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+1. Rangkuman Indikator Attrition
+<br>Top bar ini memberikan overview mengenai indikator yang harus ditekan oleh perusahaan, seperti:
+* Attrition Rate
+* Jumlah Karyawan
+* Over Time Rate untuk karyawan yang masih tinggal
+
+2. Faktor Internal Karyawan
+<br>Bagian ini menjelaskan faktor internal karyawan yang mempengaruhi terjadinya attrition.
+* Jumlah karyawan yang meninggalkan perusahaan berdasarkan umur
+* Rata-rata gaji bulanan dibandingkan dengan durasi kerja di perusahaan Jaya Jaya Maju
+* Attrition rate berdasarkan job level
+
+3. Faktor Eksternal Karyawan
+<br>Bagian ini menjelaskan faktor eksternal karyawan yang mempengaruhi terjadinya attrition.
+* Kepuasan karyawan terhadap lingkungan perusahaan
+* Kepuasan karyawan terhadap pekerjaannya
+* Tingkat keikutsertaan karyawan pada pekerjaannya
+* Tingkat work-life balance karyawan
+
+4. Analisis Over Time rate berdasarkan posisi pekerjaan
+<br>Lebih dari 50% karyawan yang meminggalkan perusahaan ternyata mengalami Over Time. Berdasarkan hal ini, dilakukan pemantauan khusus untuk kebiasaan kerja lembur di setiap job role sehingga tim HR dapat memberikan perhatian khusus jika job role tertentu memiliki angka overtime yang tinggi.
+
+Link Business Dashboard: [Jaya Jaya Maju HR Attrition Monitoring Dashboard](https://public.tableau.com/app/profile/khairunnisa.oryza/viz/AttritionDashboardforJayaJayaMajuHR/Dashboard1)
 
 ## Conclusion
 
-Jelaskan konklusi dari proyek yang dikerjakan.
+Dari proses analisa, didapatkan bahwa Over Time merupakan satu faktor krusial yang mempengaruhi terjadinya tingkat attrition yang tinggi di perusahaan Jaya Jaya Maju. Dari 17% karyawan yang meninggalkan perusahaan, lebih dari 50% mengalami over time. Hingga saat ini pun, persentase kerja lembur dari karyawan yang masih bekerja di Jaya Jaya Maju adalah 24%.
 
-### Rekomendasi Action Items (Optional)
+Analisa faktor internal menunjukkan bahwa kebanyakan dari karyawan yang banyak meninggalakan karyawan berada pada rentang umur produktif (25-37 tahun) dan memiliki gaji bulanan rata-rata yang rendah, terlepas dari lamanya mereka bekerja di perusahaan. Faktor job level pun berpengaruh. 60% dari karyawan yang meninggalkan perusahaan berasal dari job level terbawah. Berdasarkan hal ini, selanjutnya dilakukan analisis berdasarkan faktor eksternal seperti kepuasan lingkungan kerja, kepuasan terhadap pekerjaan, tingkat keikutsertaan pada pekerjaan, dan work-life balance. Faktanya, 32% dari karyawan yang meninggalkan perusahaan memang miliki kepuasan lingkungan kerja yang rendah, walaupun mereka memiliki kepuasan kerja dan keikutsertaan dalam pekerjaan yang tinggi. Dari 17% karyawan yang keluar, 35% dan 51% dari mereka memiliki Job Satisfaction dan Involvement yang tinggi, dimana hal ini menunjukkan mereka memiliki passion dan semangat yang baik dalam melakukan pekerjaannya. Dari sisi work-life balance pun, lebih dari 50% memiliki work-life balance yang sangat baik, yang mengindikasikan mereka adalah karyawan-karyawan yang high performing namun tidak merasa diapresiasi dengan cukup, tidak hanya dari sisi benefit, namun juga dari kesehatan lingkungan kerja.
 
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-
-- action item 1
-- action item 2
+### Rekomendasi Action Items
+Beberapa rekomendasi action items yang harus dilakukan adalah:
+1. Menurunkan tingkat over time, terutama pada job role yang memiliki tingkat over time tinggi
+2. Melakukan survey kepuasan lingkungan kerja, untuk mengidentifikasi faktor-faktor lain yang menyebabkan high-valued employee meninggalkan perusahaan.
+3. Tambahkan program-program yang dapat mendukung kepuasan kerja, seperti skill mentoring, sertifikasi, dan grup hobi agar karyawan tetap berkembang walaupun pemberian kompensasi dan tunjangan masih belum bisa maksimal.
